@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergy Checker</title>
+    <style>
+         body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('https://post.healthline.com/wp-content/uploads/2020/06/10666-21_Homemade_Baby_Food_Recipes_1296x728-header.jpg');
+        background-size: cover;
+        background-color: #00b894; 
+        
+    }
+
+    header {
+        background-color: #fdcb6e; /* Orange color for the header */
+        color: #4caf50;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+        section {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Allergy Checker</h1>
+    </header>
+
+    <section>
+        <label for="allergies">Enter Your Allergies (comma-separated):</label>
+        <input type="text" id="allergies" placeholder="e.g., peanuts, dairy">
+
+        <label for="food">Enter the Food You Want to Make:</label>
+        <input type="text" id="food" placeholder="e.g., spaghetti bolognese">
+
+        <button onclick="checkAllergies()">Check Allergies</button>
+
+        <h2>Possibility of Allergens:</h2>
+        <p id="allergyResult"></p>
+
+        <h2>Recipes:</h2>
+        <ul id="recipeList"></ul>
+    </section>
+
+    <script>
+        function checkAllergies() {
+            // Get user input
+            var allergiesInput = document.getElementById('allergies').value;
+            var foodInput = document.getElementById('food').value;
+
+            // Assume a simple check for demonstration purposes
+            // Replace this with your actual logic to check allergens
+            var hasAllergens = Math.random() < 0.5;
+
+            // Display result
+            var resultElement = document.getElementById('allergyResult');
+            resultElement.textContent = hasAllergens
+                ? 'This food may contain allergens.'
+                : 'This food is likely allergen-free.';
+
+            // Display sample recipes
+            var recipeListElement = document.getElementById('recipeList');
+            recipeListElement.innerHTML = '';
+            if (!hasAllergens) {
+                var recipes = [
+                    'Recipe 1: Pasta with Tomato Sauce',
+                    'Recipe 2: Grilled Chicken Salad',
+                    'Recipe 3: Vegetable Stir-Fry'
+                ];
+
+                recipes.forEach(function (recipe) {
+                    var li = document.createElement('li');
+                    li.textContent = recipe;
+                    recipeListElement.appendChild(li);
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>

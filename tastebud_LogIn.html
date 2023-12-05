@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TasteBud - Login</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      background-image: url('https://post.healthline.com/wp-content/uploads/2020/06/10666-21_Homemade_Baby_Food_Recipes_1296x728-header.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+      background-size: cover; 
+      margin-bottom: 50px; /* Add margin at the bottom to create space for the text below */
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    h1 {
+      background-image: linear-gradient(to right, yellow, yellow, green, yellow, yellow);
+      -webkit-background-clip: text;
+      color: transparent;;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+      text-align: left;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    .signup-link a {
+      color: #4caf50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .big-text {
+      font-size: 80px;
+      color: #228B22;	
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>TasteBud</h1>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="signup-link">
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+    <div class="big-text">
+    <b>Eat Safely
+  </div>
+
+</body>
+</html>
