@@ -89,19 +89,31 @@
     </header>
 
     <section>
+         <form id="allergyCheckForm" action="/tastebud/AllergyCheckServlet" method="post">
         <label for="allergies">Enter Your Allergies (comma-separated):</label>
         <input type="text" id="allergies" placeholder="e.g., peanuts, dairy">
 
         <label for="food">Enter the Food You Want to Make:</label>
         <input type="text" id="food" placeholder="e.g., spaghetti bolognese">
 
-        <button onclick="checkAllergies()">Check Allergies</button>
+        <button type="submit">Check Allergies</button>
+        </form>
 
-        <h2>Possibility of Allergens:</h2>
-        <p id="allergyResult"></p>
+        <h2>Allergy Check Result:</h2>
+        <p id="allergyCheckResult"></p>
 
         <h2>Recipes:</h2>
         <ul id="recipeList"></ul>
+
+         <form id="recipeForm" action="/tastebud/RecipeServlet" method="post">
+            <label for="userInput">Enter Your Query:</label>
+            <input type="text" id="userInput" name="userInput" placeholder="Tell me a recipe">
+
+            <button type="submit">Get Recipe</button>
+        </form>
+
+        <h3>AI Recipe Response:</h3>
+        <p id="aiRecipeResponse"></p>
     </section>
 
     <script>
